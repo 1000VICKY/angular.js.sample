@@ -1,1 +1,15 @@
+  <div ng-controller="myController">
+    <p>{{message}}</p>
+    <button ng-click="action();">クリックイベントでアクションを実行</button>
+    <button ng-click="testMethod();">クリックイベントを実行</button>
+  </div>
+  <div ng-controller="testController">
+    <p>{{testMessage}}</p>
+    <button ng-click="testMethod();">クリックイベントの実行</button>
+    <button ng-dblclick="loadMethod();">ダブルクリックイベントの実行</button>
+  </div>
+  <a href="/#">トップへ戻る</a>
+  <a href="/#/angular_01">ルーティングテスト01</a>
+  <a href="/#/angular_02">ルーティングテスト02</a>
+  <a href="/#/angular_03">ルーティングテスト03</a>
 <p>ルーティング01</p>

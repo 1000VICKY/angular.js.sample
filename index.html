@@ -3,26 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <title>Angularテスト</title>
-
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"></script>
     <script src="app.js"></script>
   </head>
   <body ng-app="senbiki">
-  <div ng-controller="myController">
-    <p>{{message}}</p>
-    <button ng-click="action();">クリックイベントでアクションを実行</button>
-    <button ng-click="testMethod();">クリックイベントを実行</button>
-  </div>
-  <div ng-controller="testController">
-    <p>{{testMessage}}</p>
-    <button ng-click="testMethod();">クリックイベントの実行</button>
-    <button ng-dblclick="loadMethod();">ダブルクリックイベントの実行</button>
-  </div>
-  <a href="/#">トップへ戻る</a>
-  <a href="/#/angular_01">ルーティングテスト01</a>
-  <a href="/#/angular_02">ルーティングテスト02</a>
-  <a href="/#/angular_03">ルーティングテスト03</a>
   <div ng-view></div>
   </body>
 </html>

@@ -35,6 +35,13 @@
         }
     }
 
+    var FrontController = function($scope){
+        location.href = "http://yahoo.co.jp";
+        $scope . redirectMethod = function (){
+            //リダイレクト処理
+        }
+    }
+
     /**
      * AngularJSのモジュール名の指定
      * HTMLタグ上にng-app="モジュール名"の属性を指定する。
@@ -43,6 +50,7 @@
     appModule.controller("myController", MyController);
     appModule.controller("testController", TestController);
     appModule.controller("sampleController", SampleCotroller);
+    appModule.controller("frontController", FrontCotroller);
 
     /**
      * AngularJS route
@@ -52,6 +60,14 @@
     appModule.config(['$routeProvider',
         function($routeProvider){
             $routeProvider
+            .when("/",{
+                    controller : "frontController",
+                    templateUrl: "./views/front.html"
+            })
+            .when("/linkList",{
+                    controller : "myController",
+                    templateUrl: "./views/link_list.html"
+            })
             .when("/angular_01",{
                     controller : "myController",
                     templateUrl: "./views/angular_01.html"
