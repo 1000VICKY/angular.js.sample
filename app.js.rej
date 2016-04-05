@@ -1,0 +1,15 @@
+diff a/app.js b/app.js	(rejected hunks)
+@@ -35,6 +35,13 @@
+         }
+     }
+ 
++    var FrontController = function($scope){
++        location.href = "http://yahoo.co.jp";
++        $scope . redirectMethod = function (){
++            //リダイレクト処理
++        }
++    }
++
+     /**
+      * AngularJSのモジュール名の指定
+      * HTMLタグ上にng-app="モジュール名"の属性を指定する。

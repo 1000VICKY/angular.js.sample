@@ -25,7 +25,7 @@
         }
     };
 
-    var SampleCotroller = function($scope){
+    var SampleController = function($scope){
         $scope.sampleMessage = "サンプルメッセージ";
         $scope.sampleMethod = function (){
             $scope.sampleMessage ="サンプルメッセージを変更";
@@ -36,7 +36,8 @@
     }
 
     var FrontController = function($scope){
-        location.href = "http://yahoo.co.jp";
+        alert(location.href);
+        location.href="/#/linkList";
         $scope . redirectMethod = function (){
             //リダイレクト処理
         }
@@ -49,8 +50,8 @@
     var appModule = angular.module("senbiki", ["ngRoute"]);
     appModule.controller("myController", MyController);
     appModule.controller("testController", TestController);
-    appModule.controller("sampleController", SampleCotroller);
-    appModule.controller("frontController", FrontCotroller);
+    appModule.controller("sampleController", SampleController);
+    appModule.controller("frontController", FrontController);
 
     /**
      * AngularJS route
